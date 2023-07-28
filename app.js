@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const BookNamesRoute = require('./routes/BookNames');
+const DanBrown  = require('./controllers/DanBrown');
+app.use('/dan', DanBrown);
 app.use('/BookNames', BookNamesRoute);
 app.use(cors())
 app.use(express.json());
